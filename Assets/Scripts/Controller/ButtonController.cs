@@ -25,4 +25,18 @@ public class ButtonController : MonoBehaviour
     {
         GameManager.I.ChangeCharacterBoard.SetActive(true);
     }
+
+    public void OnClickCallBell()
+    {
+        GameManager.I.CallBellMessage.SetActive(true);
+        GameManager.I.CallBell.SetActive(false);
+        GameManager.I.OnMessage = true;
+    }
+
+    public void OnClickCallEnd()
+    {
+        GameManager.I.CallBellMessage.SetActive(false);
+        GameManager.I.CallBell.SetActive(true);
+        GameManager.I.OnMessage = false;
+    }
 }
