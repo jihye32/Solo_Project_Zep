@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class CharacterInputController : CharacterController
 {
     private Camera _camera;
+
     private void Awake()
     {
         _camera = Camera.main;
@@ -16,9 +17,9 @@ public class CharacterInputController : CharacterController
         Vector2 moveInput = value.Get<Vector2>().normalized;
         CallMoveEvent(moveInput);//입력이 되어서 이벤트가 발생함을 알려준다.
     }
+
     public void OnLook(InputValue value)
     {
-        
         Vector2 newAim = value.Get<Vector2>();
         //마우스 좌표를 월드 좌표로 받아와야함.
         Vector2 worldPos = _camera.ScreenToWorldPoint(newAim);

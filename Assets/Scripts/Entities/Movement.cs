@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour
     private Vector2 _direction = Vector2.zero;
     private Rigidbody2D _rigidbody;
 
-    public int speed = 5;
+    [SerializeField] private int speed = 5;
     private void Awake()
     {
         _controller = GetComponent<CharacterController>();
