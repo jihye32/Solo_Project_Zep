@@ -8,7 +8,7 @@
 6. 이름 입력 시스템
 7. 캐릭터 선택 시스템
 
-<img src="https://img.shields.io/badge/완-3178C6?style=flat&logo=Unity&logoColor=white"/>
+#### 필수 요구사항 구현 완료
 ----
 ## 선택 요구사항
 
