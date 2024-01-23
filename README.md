@@ -1,6 +1,6 @@
 ## 필수 요구사항
 
-1. 캐릭터 만들기  <img src="https://img.shields.io/badge/완-3178C6?style=flat&logo=Uniy&logoColor=white"/>
+1. 캐릭터 만들기  <img src="https://img.shields.io/badge/완-3178C6?style=flat&logo=Unity&logoColor=white"/>
 2. 캐릭터 이동
 3. 방 만들기
 4. 카메라 따라가기
