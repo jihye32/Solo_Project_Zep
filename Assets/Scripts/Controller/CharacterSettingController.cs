@@ -18,7 +18,6 @@ public class Character
 
 public class CharacterSettingController : MonoBehaviour
 {
-    [SerializeField] GameObject selectCharacter;
     protected void SetName(string name)
     {
         PlayerPrefs.SetString("Name", name);

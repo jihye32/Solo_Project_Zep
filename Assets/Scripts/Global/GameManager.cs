@@ -9,17 +9,21 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("UI")]
     public Text timeText;
-    public Text playerNameText;
-
-    public GameObject MainCharacter;
     public GameObject ChangeNameBoard;
+    public GameObject ChangeCharacterBoard;
 
-    public InputField changeName;
+    [Header("Change")]
+    public InputField ChangeName;
 
-
+    [Header("Player")]
+    public Text playerNameText;
+    public GameObject MainCharacter;
     public List<Character> characterList = new List<Character>();
-    int selectCharacter;
+
+
+    private int selectCharacter;
 
     public static GameManager I;
 
@@ -32,7 +36,7 @@ public class GameManager : MonoBehaviour
     {
         playerNameText.text = PlayerPrefs.GetString("Name");
         selectCharacter = PlayerPrefs.GetInt("Index");
-        ChangedCharacter();
+        ChangedCharacter(selectCharacter);
     }
 
     private void Update()
@@ -40,9 +44,9 @@ public class GameManager : MonoBehaviour
         timeText.text = DateTime.Now.ToString("HH:mm");
     }
 
-    private void ChangedCharacter()
+    public void ChangedCharacter(int index)
     {
-        MainCharacter.GetComponent<SpriteRenderer>().sprite = characterList[selectCharacter].CharacterSprite;
-        MainCharacter.GetComponent<Animator>().runtimeAnimatorController = characterList[selectCharacter].controller;
+        MainCharacter.GetComponent<SpriteRenderer>().sprite = characterList[index].CharacterSprite;
+        MainCharacter.GetComponent<Animator>().runtimeAnimatorController = characterList[index].controller;
     }
 }
