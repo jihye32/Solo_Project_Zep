@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public GameObject CallBell;
     public GameObject CallBellMessage;
     public bool OnMessage = false;
+
     [Header("Change")]
     public InputField ChangeName;
 
@@ -24,6 +25,8 @@ public class GameManager : MonoBehaviour
     public GameObject MainCharacter;
     public List<Character> characterList = new List<Character>();
 
+    [Header("NPC")]
+    public GameObject tutor;
     private NPCcontroller n_controller;
     private int selectCharacter;
 
@@ -45,7 +48,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         timeText.text = DateTime.Now.ToString("HH:mm");
-        if(n_controller.DistanceToCharacter() < 3f && !OnMessage)
+        if(n_controller.DistanceToCharacter(tutor) < 3f && !OnMessage)
         {
             CallBell.SetActive(true);
         }
