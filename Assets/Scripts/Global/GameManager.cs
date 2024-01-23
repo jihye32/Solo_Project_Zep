@@ -13,10 +13,20 @@ public class GameManager : MonoBehaviour
     public Text playerNameText;
 
     public GameObject MainCharacter;
-    
-    private Character character = new Character();
+    public GameObject ChangeNameBoard;
+
+    public InputField changeName;
+
+
     public List<Character> characterList = new List<Character>();
     int selectCharacter;
+
+    public static GameManager I;
+
+    private void Awake()
+    {
+        I = this;
+    }
 
     private void Start()
     {
